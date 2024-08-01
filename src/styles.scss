@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+.blue-color {
+  color: rgb(31, 32, 113);
+}
+
+.red-color {
+  color: rgb(203, 74, 76);
+}
+
+.blue-color {
+  color: rgb(234, 234, 234);
+}
+
+a {
+  text-decoration: none;
+}
+
+.active-link {
+  background-color: white !important;
+  i,
+  svg,
+  span {
+    color: rgb(203, 74, 76) !important;
+  }
+  color: rgb(203, 74, 76) !important;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  margin: 3rem auto;
+  input {
+    padding: 8px 10px;
+    width: 550px;
+    border-radius: 15px;
+    border: 3px solid rgb(31, 32, 113);
+    outline: none;
+    font-weight: 700;
+    font-size: 20px;
+    caret-color: rgb(31, 32, 113);
+  }
+  button {
+    border: none;
+    background: rgb(31, 32, 113);
+    color: white;
+    padding: 9px 45px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+table {
+  width: 65%;
+  margin: auto;
+  font-size: 20px;
+
+  th,
+  td {
+    padding: 8px;
+    text-align: center;
+    border: none;
+  }
+
+  th {
+    background-color: rgb(203, 74, 76);
+    color: white;
+    &:first-child {
+      border-top-left-radius: 15px;
+    }
+    &:last-child {
+      border-top-right-radius: 15px;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid rgb(203, 74, 76);
+  }
+}
+
+.container {
+  // margin-left: 250px;
+  padding: 40px 5rem 40px 9rem;
+}
+
+.btn {
+  border: none;
+  background: rgb(31, 32, 113);
+  color: white;
+  padding: 9px 45px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  &:hover {
+    background-color: aqua;
+  }
+}

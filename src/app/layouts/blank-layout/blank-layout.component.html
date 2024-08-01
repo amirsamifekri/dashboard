@@ -1,0 +1,42 @@
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">profile</a></li>
+      <li><a href="#">message</a></li>
+      <li><a href="#">notification</a></li>
+      <li><a href="#">language</a></li>
+      <li><a role="button" (click)="logOut()">LogOut</a></li>
+    </ul>
+  </nav>
+  <aside>
+    <h2>LOGO</h2>
+    <ul>
+      <li>
+        <a routerLink="/category" routerLinkActive="active-link">
+          <i class="fa-solid fa-layer-group"></i> <span>category</span></a
+        >
+      </li>
+      <li>
+        <a routerLink="/product" routerLinkActive="active-link">
+          <i class="fa-brands fa-product-hunt"></i>
+          <span>product</span></a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-regular fa-hand-point-up"></i>
+          order</a
+        >
+      </li>
+      <li>
+        <a href="">
+          <i class="fa-regular fa-user"></i>
+          user</a
+        >
+      </li>
+    </ul>
+  </aside>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>

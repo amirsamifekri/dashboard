@@ -1,0 +1,122 @@
+<section>
+  <form [formGroup]="registerForm" (ngSubmit)="handleForm()">
+    <div class="item">
+      <label for="fullName">fullName</label>
+      <input
+        class="form-control"
+        type="text"
+        id="fullName"
+        name="fullName"
+        formControlName="fullName"
+      />
+      @if (registerForm.get('fullName')?.errors &&
+      registerForm.get('fullName')?.touched) {
+      <div class="alert alert-info m-0 p-2">
+        <p
+          class="m-0"
+          *ngIf="registerForm.get('fullName')?.getError('required')"
+        >
+          Full Name is required
+        </p>
+      </div>
+      }
+    </div>
+    <div class="item">
+      <label for="email">email</label>
+      <input
+        class="form-control"
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+      />
+      @if (registerForm.get('email')?.errors &&
+      registerForm.get('email')?.touched) {
+      <div class="alert alert-info m-0 p-2">
+        <p class="m-0" *ngIf="registerForm.get('email')?.getError('required')">
+          email is required
+        </p>
+        <p class="m-0" *ngIf="registerForm.get('email')?.getError('pattern')">
+          email pattern is wrong
+        </p>
+      </div>
+      }
+    </div>
+    <div class="item">
+      <label for="email">password</label>
+      <input
+        class="form-control"
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+      />
+      @if (registerForm.get('password')?.errors &&
+      registerForm.get('password')?.touched) {
+      <div class="alert alert-info m-0 p-2">
+        <p
+          class="m-0"
+          *ngIf="registerForm.get('password')?.getError('required')"
+        >
+          Password is required
+        </p>
+        <p
+          class="m-0"
+          *ngIf="registerForm.get('password')?.getError('pattern')"
+        >
+          Password must start with a capital letter then a small letter or more
+          then 6 numbers at least
+        </p>
+      </div>
+      }
+    </div>
+    <div class="item">
+      <label for="gender">gender</label>
+      <input
+        class="form-control"
+        type="number"
+        id="gender"
+        name="gender"
+        formControlName="gender"
+      />
+      @if (registerForm.get('gender')?.errors &&
+      registerForm.get('gender')?.touched) {
+      <div class="alert alert-info m-0 p-2">
+        <p class="m-0" *ngIf="registerForm.get('gender')?.getError('required')">
+          gender is required
+        </p>
+        <p class="m-0" *ngIf="registerForm.get('gender')?.getError('pattern')">
+          gender must be 0 or 1
+        </p>
+      </div>
+      }
+    </div>
+    <div class="item">
+      <label for="role">role</label>
+      <input
+        class="form-control"
+        type="number"
+        id="role"
+        name="role"
+        formControlName="role"
+      />
+      @if (registerForm.get('role')?.errors &&
+      registerForm.get('role')?.touched) {
+      <div class="alert alert-info m-0 p-2">
+        <p class="m-0" *ngIf="registerForm.get('role')?.getError('required')">
+          role is required
+        </p>
+        <p class="m-0" *ngIf="registerForm.get('role')?.getError('pattern')">
+          role must be 0 or 1 or 2 or 3 or 4
+        </p>
+      </div>
+      }
+    </div>
+    <button
+      [disabled]="registerForm.invalid"
+      class="form-control btn btn-info mt-3"
+    >
+      Register
+    </button>
+  </form>
+</section>

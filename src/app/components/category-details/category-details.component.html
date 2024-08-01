@@ -1,0 +1,16 @@
+@if (category) {
+
+<section class="shadow w-75 rounded-3 mx-auto my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img class="w-100" [src]="category.image" [alt]="category.name" />
+    </div>
+    <div class="col-md-6">
+      <div>
+        <h2>Category Name : {{ category.name }}</h2>
+        <h4>Category Type : {{ category.slug }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+}

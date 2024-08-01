@@ -1,0 +1,23 @@
+<section>
+  <div class="search-box">
+    <input type="text" placeholder="search..." [(ngModel)]="searchText" />
+    <button>Create</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of categories|search:searchText; track $index) {
+      <tr role="button" [routerLink]="['/category-details', item._id]">
+        <td>{{ item.name }}</td>
+        <td><img [src]="item.image" [alt]="item.name" /></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</section>
